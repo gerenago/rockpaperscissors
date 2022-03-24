@@ -1,29 +1,45 @@
+function playRound ()
 //user inputs variation of rock/paper/scissors
-function userPlay () {
-    let userSelection = prompt ("rock, paper, or scissors?");
-    let lowerCaseSelection = userSelection.toLowerCase();
-    return lowerCaseSelection
-}
+    userPlay()
+    computerPlay ()
+    function userPlay () {
+        let userSelection = prompt ("rock, paper, or scissors?");
+        let lowerCaseSelection = userSelection.toLowerCase();
+        //If input is viable, return value, otherwise repeat
+        if (lowerCaseSelection == "rock" || lowerCaseSelection == "paper" || lowerCaseSelection == "scissors") {
+            return lowerCaseSelection
+            }
+            else {
+                userPlay ();
+                
+        }
+        
+    }
 
-//computer randomly selects rock/paper/scissors
-function computerPlay () {
-    var gameOptions = [
-        "rock",
-        "paper",
-        "scissors"
-    ];
-    let computerSelection = gameOptions[Math.floor(Math.random()*gameOptions.length)];
-    return computerSelection
-}
+    //computer randomly selects rock/paper/scissors
+    function computerPlay () {
+        var gameOptions = [
+            "rock",
+            "paper",
+            "scissors"
+        ];
+        let computerSelection = gameOptions[Math.floor(Math.random()*gameOptions.length)];
+        return computerSelection
+    }
 
-//user value is compared to computer value
-//if value is same, tie
-//if value is different, check type
-//if computer rock, user paper = win
-//if computer rock, user scissors = lose
-//if computer paper, user rock = lose
-//if computer paper, user scissors = win
-//if computer scissors, user rock = win
-//if computer scissors, user paper = lose
-//output is Lose/Win/Tie
-//
+    //user value is compared to computer value
+    //if value is same, tie
+    if (computerSelection == lowerCaseSelection) {
+        console.log ("It's a tie!")
+    }
+    // if values are different and player wins, print message
+    else if ((computerSelection == "rock" && lowerCaseSelection == "paper") 
+    || (computerSelection == "paper" && lowerCaseSelection == "scissors")
+    || (computerSelection == "scissors" && lowerCaseSelection == "rock")) {
+            console.log (`You win! ${lowerCaseSelection} beats ${computerSelection}!`)
+    }
+    // if anything else (not a tie and not win) player loses, print message
+    else {
+        console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
+    }
+    //output is Lose/Win/Tie
