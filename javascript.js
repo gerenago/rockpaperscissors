@@ -1,4 +1,15 @@
+const computerSelection = computerPlay ();
+function computerPlay () {
+    var choices = [
+        "rock",
+        "paper",
+        "scissors"
+    ];
+    return choices[Math.floor(Math.random()*choices.length)];
+}
+const lowerCaseSelection = "rock";
 
+function playRound (computerSelection, lowerCaseSelection) {
 
     //user value is compared to computer value
     //if value is same, tie
@@ -16,3 +27,5 @@
         console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
     }
     //output is Lose/Win/Tie
+}
+
