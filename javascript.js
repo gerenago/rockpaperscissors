@@ -1,5 +1,16 @@
 //user inputs variation of rock/paper/scissors
+
 //computer randomly selects rock/paper/scissors
+function computerPlay () {
+    var gameOptions = [
+        "rock",
+        "paper",
+        "scissors"
+    ];
+    let computerSelection = gameOptions[Math.floor(Math.random()*gameOptions.length)];
+    return computerSelection
+}
+
 //user value is compared to computer value
 //if value is same, tie
 //if value is different, check type
