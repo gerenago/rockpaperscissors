@@ -1,4 +1,9 @@
 //user inputs variation of rock/paper/scissors
+function userPlay () {
+    let userSelection = prompt ("rock, paper, or scissors?");
+    let lowerCaseSelection = userSelection.toLowerCase();
+    return lowerCaseSelection
+}
 
 //computer randomly selects rock/paper/scissors
 function computerPlay () {
