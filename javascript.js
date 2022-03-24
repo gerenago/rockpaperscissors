@@ -1,6 +1,6 @@
-function playRound ()
+function playRound () {
 //user inputs variation of rock/paper/scissors
-    userPlay()
+    userPlay ()
     computerPlay ()
     function userPlay () {
         let userSelection = prompt ("rock, paper, or scissors?");
@@ -43,3 +43,4 @@ function playRound ()
         console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
     }
     //output is Lose/Win/Tie
+}
