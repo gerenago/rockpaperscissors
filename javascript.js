@@ -1,3 +1,4 @@
+//computer randomly selects rock paper or scissors
 const computerSelection = computerPlay ();
 function computerPlay () {
     var choices = [
@@ -7,6 +8,7 @@ function computerPlay () {
     ];
     return choices[Math.floor(Math.random()*choices.length)];
 }
+//input from user
 const lowerCaseSelection = "rock";
 
 function playRound (computerSelection, lowerCaseSelection) {
@@ -28,4 +30,15 @@ function playRound (computerSelection, lowerCaseSelection) {
     }
     //output is Lose/Win/Tie
 }
-
+//play multiple round game
+function game () {
+//count # rounds played
+//if # less than 5, play another round
+//if # = 5, end game, report winner
+//count score
+//report score after each round
+//user #, computer (rounds-user #)
+//if user wins, +1 to userWin
+//if user loses, +0 to userWin
+//if user ties, +0 to userWin
+}
