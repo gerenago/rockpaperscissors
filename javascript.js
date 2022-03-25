@@ -21,16 +21,18 @@ function playRound (computerSelection, lowerCaseSelection) {
     || (computerSelection == "scissors" && lowerCaseSelection == "rock")) {
             console.log (`You win! ${lowerCaseSelection} beats ${computerSelection}!`)
             //if win, add 1 to score
-            score ++
+            userScore ++
     }
     // if anything else (not a tie and not win) player loses, print message
     else {
         console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
+        computerScore ++
     }
     //output is Lose/Win/Tie
 }
 //keep score
-let score = 0
+let userScore = 0
+let computerScore = 0
 //play multiple round game
 function game () {
 //count # rounds played
@@ -48,7 +50,7 @@ function game () {
 
     }
     //if the user wins more times than the # of rounds - their score, they win
-    if (score > (5 - score)) {
+    if (userScore > computerScore) {
         console.log ("You won the game!")
     }
     //otherwise the computer wins
