@@ -48,7 +48,7 @@ function game () {
 
     }
     //if the user wins more times than the # of rounds - their score, they win
-    if (score > (i + 1 - score)) {
+    if (score > (5 - score)) {
         console.log ("You won the game!")
     }
     //otherwise the computer wins
