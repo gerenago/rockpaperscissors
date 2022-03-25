@@ -1,16 +1,13 @@
 //computer randomly selects rock paper or scissors
-const computerSelection = computerPlay ();
-function computerPlay () {
-    var choices = [
-        "rock",
-        "paper",
-        "scissors"
-    ];
-    return choices[Math.floor(Math.random()*choices.length)];
-}
-//input from user
-const lowerCaseSelection = "rock";
+var choices = [
+    "rock",
+    "paper",
+    "scissors"
+];
+let computerSelection;
 
+//input from user
+let lowerCaseSelection;
 function playRound (computerSelection, lowerCaseSelection) {
 
     //user value is compared to computer value
@@ -34,9 +31,16 @@ function playRound (computerSelection, lowerCaseSelection) {
 function game () {
 //count # rounds played
 //if # less than 5, play another round
+    
+    for (let i=0; i<5; i++) {
+        let userSelection = prompt("rock, paper, or scissors?");
+        let lowerCaseSelection = userSelection.toLowerCase()
+        let computerSelection = choices[Math.floor(Math.random()*choices.length)];
+        playRound (computerSelection, lowerCaseSelection)
+
+    }
 //if # = 5, end game, report winner
 //count score
-//report score after each round
 //user #, computer (rounds-user #)
 //if user wins, +1 to userWin
 //if user loses, +0 to userWin
