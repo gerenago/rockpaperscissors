@@ -34,21 +34,21 @@ function playRound (computerSelection, lowerCaseSelection) {
 let userScore = 0
 let computerScore = 0
 //play multiple round game
-function game () {
+//function game () {
 //count # rounds played
 //if # less than 5, play another round
     
-    for (let i=0; i<5; i++) {
+   // for (let i=0; i<5; i++) {
         //get selection from user
-        let userSelection = prompt("rock, paper, or scissors?");
+       // let userSelection = prompt("rock, paper, or scissors?");
         //transition to lowercase to compare
-        let lowerCaseSelection = userSelection.toLowerCase()
+       // let lowerCaseSelection = userSelection.toLowerCase()
         //get selection from computer
-        let computerSelection = choices[Math.floor(Math.random()*choices.length)];
+       // let computerSelection = choices[Math.floor(Math.random()*choices.length)];
         //play the round with above selections
-        playRound (computerSelection, lowerCaseSelection)
+        //playRound (computerSelection, lowerCaseSelection)
 
-    }
+   // }
     //if the user wins more times than the # of rounds - their score, they win
     if (userScore > computerScore) {
         console.log ("You won the game!")
