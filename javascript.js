@@ -50,12 +50,32 @@ let computerScore = 0
 
    // }
     //if the user wins more times than the # of rounds - their score, they win
-    if (userScore > computerScore) {
-        console.log ("You won the game!")
-    }
+    //if (userScore > computerScore) {
+        //console.log ("You won the game!")
+    //}
     //otherwise the computer wins
-    else {
-        console.log ("You lost the game!")
-    }
+    //else {
+        //console.log ("You lost the game!")
+    //}
 
-}
+//}
+const rock = document.querySelector('#rock');
+rock.addEventListener("click", selectRock {
+    lowerCaseSelection = "rock"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener("click", selectPaper(e) {
+    lowerCaseSelection = "paper"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener("click", selectScissors (e) {
+    lowerCaseSelection = "scissors"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+});
