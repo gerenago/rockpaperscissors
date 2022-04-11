@@ -66,29 +66,59 @@ let computerScore = 0
     //}
 
 //}
-    const rock = document.querySelector('.rock');
-    rock.addEventListener("click", () => {
-        lowerCaseSelection = "rock"
-        computerSelection = choices[Math.floor(Math.random()*choices.length)]
-        playRound(computerSelection, lowerCaseSelection)
-        const score = document.querySelector('.score');
-        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
-    });
+const rock = document.querySelector('.rock');
+rock.addEventListener("click", () => {
+    lowerCaseSelection = "rock"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+    const score = document.querySelector('.score');
+    score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    if (userScore == 5 || computerScore == 5) {
+        if (userScore > computerScore) {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You won the game!`;
+        }
+        else {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You lost the game!`;
+        }
+    }
+});
 
-    const paper = document.querySelector('.paper');
-    paper.addEventListener("click", () => {
-        lowerCaseSelection = "paper"
-        computerSelection = choices[Math.floor(Math.random()*choices.length)]
-        playRound(computerSelection, lowerCaseSelection)
-        const score = document.querySelector('.score');
-        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
-    });
+const paper = document.querySelector('.paper');
+paper.addEventListener("click", () => {
+    lowerCaseSelection = "paper"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+    const score = document.querySelector('.score');
+    score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    if (userScore == 5 || computerScore == 5) {
+        if (userScore > computerScore) {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You won the game!`;
+        }
+        else {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You lost the game!`;
+        }
+    }
+});
 
-    const scissors = document.querySelector('.scissors');
-    scissors.addEventListener("click", () => {
-        lowerCaseSelection = "scissors"
-        computerSelection = choices[Math.floor(Math.random()*choices.length)]
-        playRound(computerSelection, lowerCaseSelection)
-        const score = document.querySelector('.score');
-        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
-    });
+const scissors = document.querySelector('.scissors');
+scissors.addEventListener("click", () => {
+    lowerCaseSelection = "scissors"
+    computerSelection = choices[Math.floor(Math.random()*choices.length)]
+    playRound(computerSelection, lowerCaseSelection)
+    const score = document.querySelector('.score');
+    score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    if (userScore == 5 || computerScore == 5) {
+        if (userScore > computerScore) {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You won the game!`;
+        }
+        else {
+            const endResult = document.querySelector('.endResult');
+            endResult.textContent = `You lost the game!`;
+        }
+    }
+});
