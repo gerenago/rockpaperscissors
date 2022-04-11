@@ -13,19 +13,26 @@ function playRound (computerSelection, lowerCaseSelection) {
     //user value is compared to computer value
     //if value is same, tie
     if (computerSelection == lowerCaseSelection) {
-        console.log ("It's a tie!")
+        const roundResult = document.querySelector('.roundResult');
+        roundResult.textContent = "It's a tie!";
+        //console.log ("It's a tie!")
+
     }
     // if values are different and player wins, print message
     else if ((computerSelection == "rock" && lowerCaseSelection == "paper") 
     || (computerSelection == "paper" && lowerCaseSelection == "scissors")
     || (computerSelection == "scissors" && lowerCaseSelection == "rock")) {
-            console.log (`You win! ${lowerCaseSelection} beats ${computerSelection}!`)
+        const roundResult = document.querySelector('.roundResult');
+        roundResult.textContent = `You win! ${lowerCaseSelection} beats ${computerSelection}!`;
+        //console.log (`You win! ${lowerCaseSelection} beats ${computerSelection}!`)
             //if win, add 1 to score
             userScore ++
     }
     // if anything else (not a tie and not win) player loses, print message
     else {
-        console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
+        const roundResult = document.querySelector('.roundResult');
+        roundResult.textContent = `You lose! ${computerSelection} beats ${lowerCaseSelection}`;
+        //console.log (`You lose! ${computerSelection} beats ${lowerCaseSelection}`)
         computerScore ++
     }
     //output is Lose/Win/Tie
@@ -59,23 +66,29 @@ let computerScore = 0
     //}
 
 //}
-const rock = document.querySelector('#rock');
-rock.addEventListener("click", selectRock {
-    lowerCaseSelection = "rock"
-    computerSelection = choices[Math.floor(Math.random()*choices.length)]
-    playRound(computerSelection, lowerCaseSelection)
-});
+    const rock = document.querySelector('.rock');
+    rock.addEventListener("click", () => {
+        lowerCaseSelection = "rock"
+        computerSelection = choices[Math.floor(Math.random()*choices.length)]
+        playRound(computerSelection, lowerCaseSelection)
+        const score = document.querySelector('.score');
+        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    });
 
-const paper = document.querySelector('#paper');
-paper.addEventListener("click", selectPaper(e) {
-    lowerCaseSelection = "paper"
-    computerSelection = choices[Math.floor(Math.random()*choices.length)]
-    playRound(computerSelection, lowerCaseSelection)
-});
+    const paper = document.querySelector('.paper');
+    paper.addEventListener("click", () => {
+        lowerCaseSelection = "paper"
+        computerSelection = choices[Math.floor(Math.random()*choices.length)]
+        playRound(computerSelection, lowerCaseSelection)
+        const score = document.querySelector('.score');
+        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    });
 
-const scissors = document.querySelector('#scissors');
-scissors.addEventListener("click", selectScissors (e) {
-    lowerCaseSelection = "scissors"
-    computerSelection = choices[Math.floor(Math.random()*choices.length)]
-    playRound(computerSelection, lowerCaseSelection)
-});
+    const scissors = document.querySelector('.scissors');
+    scissors.addEventListener("click", () => {
+        lowerCaseSelection = "scissors"
+        computerSelection = choices[Math.floor(Math.random()*choices.length)]
+        playRound(computerSelection, lowerCaseSelection)
+        const score = document.querySelector('.score');
+        score.textContent = `The score is: User = ${userScore}, Computer = ${computerScore}`;
+    });
